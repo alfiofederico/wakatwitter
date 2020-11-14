@@ -11,7 +11,7 @@
                         width="50"
                         height="50">
                         
-                        <button type="submit" class="bg-blue-500 rounded-lg shadow py-2 px-2 text-white" style="outline:none">TweetIt!</button>
+                        <button type="submit" class="bg-blue-500 rounded-lg shadow py-2 px-10 text-sm text-white hover:bg-blue-600" style="outline:none">WakaTweet!</button>
                     </footer>             
                 </form>
                 
