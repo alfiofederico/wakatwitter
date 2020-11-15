@@ -4,7 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>TwittyWaka</title>
+        <script src="https://kit.fontawesome.com/4679d77dc7.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/png" href="/imgs/favicon.ico"/>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
@@ -12,8 +14,10 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background: url('/imgs/home.jpg');
+                background-size: cover;
+                background-position: center;
+                color: rgb(220, 228, 202);
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -45,11 +49,12 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 50px;
+                font-weight: bold
             }
 
             .links > a {
-                color: #636b6f;
+                color: #fff;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -64,16 +69,25 @@
         </style>
     </head>
     <body>
+        <div class="app-wrap" 
+        style="display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                background-image: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.6)
+            );">
         <div class="flex-center position-ref full-height">
 
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Wakayama Twitter
+            <div class="content sm:text-xs">
+                <div class="title m-b-md ">
+                    TwittyWaka
                 </div>
 
                 <div class="links">
-                  {{--   <a href="https://laracasts.com/">Laracasts</a> --}}
+                  
                      
                     @auth
                         <a href="{{ url('/tweets') }}">Home</a>
@@ -83,6 +97,7 @@
                     @endauth
                 </div>
             </div>
+        </div>
         </div>
     </body>
 </html>
