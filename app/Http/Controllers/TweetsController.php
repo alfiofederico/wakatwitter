@@ -12,17 +12,17 @@ class TweetsController extends Controller
         $tweets = \App\Tweet::latest()->get();
         return view('tweets.index', [
 
-            'tweets' => auth()->user()->timeline()
+            'tweets' => auth()->user()->timeline(),
             
         ]);
     }
     public function store()
     {
-        $attributes = request()->validate(['body'=>'required|max:255']);
+        $attributes = request()->validate(['body'=>'required|max:255',]);
 
         Tweet::create([
             'user_id'=> auth()->id(),
-            'body'=> $attributes['body']
+            'body'=> $attributes['body'],
         ]);
 
         return redirect('/tweets');
