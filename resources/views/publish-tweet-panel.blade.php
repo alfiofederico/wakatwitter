@@ -1,4 +1,6 @@
-            <div class="border border-blue-400 rounded-lg px-8 py-6 mb-8">
+            
+            
+            <div class="border border-blue-400 rounded-lg px-8 py-6 mb-8 bg-white">
                 <form method="POST" action="/tweets">
                     @csrf
 
