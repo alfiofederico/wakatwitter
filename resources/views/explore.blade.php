@@ -1,4 +1,5 @@
 <x-app>
+  <body style="background:#d9e6f3">
   <div>
     @foreach ($users as $user)
 
@@ -15,4 +16,6 @@
 
     {{$users->links()}}
   </div>
+
+  </body>
 </x-app>

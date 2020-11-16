@@ -1,4 +1,5 @@
 <x-app>
+    <body style="background:#d9e6f3">
     <header class="mb-6 relative">
     <div class="relative">
         <img src="https://i.pinimg.com/originals/a9/db/d6/a9dbd64a85d59e3cbd9e89beab8968f7.jpg" alt="" class="mb-2 rounded-2xl">
@@ -31,5 +32,5 @@
         'tweets'=>$tweets
     ])
 
-   
+    </body>
 </x-app>

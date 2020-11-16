@@ -24,7 +24,7 @@
   <div id="app"> 
     <section class="px-8 py-4 mb-6">
       <header class="container mx-auto">
-        <h1><img src="/imgs/wakalogo.png" alt="logo" width="128" height="128"></h1>
+        <h1><img src="/imgs/wakalogo2.png" alt="logo" width="128" height="128"></h1>
       </header>
     </section>
     {{$slot}}

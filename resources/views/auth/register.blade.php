@@ -1,4 +1,5 @@
 <x-master>
+    <body style="background:#d9e6f3">
 <div class="container mx-auto flex justify-center">
     <div class="px-6 py-4 bg-gray-500 mb-1">
         <div class="col-md-8">
@@ -117,10 +118,11 @@
 
                 <div>
                     <button type="submit"
-                            class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500 mr-2"
+                            class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500 mr-2" style="outline: none"
                     >
                         Register
                     </button>
                 </div>
             </form>
+        </body>
 </x-master>
