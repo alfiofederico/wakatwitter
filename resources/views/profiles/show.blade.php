@@ -2,8 +2,9 @@
     <body style="background:#d9e6f3">
     <header class="mb-6 relative">
     <div class="relative">
-        <img src="https://i.pinimg.com/originals/a9/db/d6/a9dbd64a85d59e3cbd9e89beab8968f7.jpg" alt="" class="mb-5 rounded-2xl">
-        <img src="{{ $user->avatar }}" alt="avatar" class="rounded-full mr-2 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2 w-16 md:w-32 lg:w-32"  style="left: 50%">
+        <img src="{{ $user->banner }}" alt="banner" class="mb-5 rounded-2xl"  style="max-height: 287px; min-width:700px" >
+
+        <img src="{{ $user->avatar }}" alt="avatar" class="rounded-full mr-2 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2 w-16"  style="left: 50%">
     </div>
 
         <div class="flex justify-between items-center mb-6">
@@ -25,7 +26,7 @@
         </div>
 
         
-        <p>testm.</p>
+        <p>{{ $user->bio}}</p>
     </header>
 
     @include('timeline', [

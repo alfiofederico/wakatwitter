@@ -35,6 +35,8 @@ class ProfilesController extends Controller
             'username' => ['required', 'string', 'max:255', 
             'alpha_dash', Rule::unique('users')->ignore($user)],
             'avatar' => ['image','dimensions:min_width=100,min_height=200'],
+            'banner' => ['image','mimes:jpeg,png,jpg,gif,svg'],
+            'bio' =>['string', 'max:255','nullable'],
             'name' =>['required', 'string', 'max:255'],
             'email'=> ['required', 'string', 'email', 'max:255', 
             Rule::unique('users')->ignore($user)],
@@ -47,8 +49,24 @@ class ProfilesController extends Controller
 
         if(request('avatar')){
              $attributes['avatar']=request('avatar')->store('avatars');
+        } 
+        if(request('banner')){
+            $attributes['banner']=request('banner')->store('banners');
         }
-       
+        if(request('bio')){
+            $attributes['bio']=request('bio');
+        }
+
+        
+            /* if(request('avatar')){
+             $attributes['avatar']=request('avatar')->store('avatars');
+            } elseif(request('banner')){
+                $attributes['banner']=request('banner')->store('banners');
+            }elseif(request('bio')){
+                $attributes['bio']=request('bio');
+            }
+             */
+        
 
         $user->update($attributes);
         return redirect($user->path());

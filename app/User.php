@@ -39,6 +39,14 @@ class User extends Authenticatable
     {
         return asset($value ?: '/imgs/cropped-logo_transparent.png');
     }
+    public function getBannerAttribute($value)
+    {
+        return asset($value ?: 'https://i.pinimg.com/originals/a9/db/d6/a9dbd64a85d59e3cbd9e89beab8968f7.jpg');
+    }
+    public function getBioAttribute($value)
+    {
+        return ($value);
+    }
 
     public function setPasswordAttribute($password){
 	$this->attributes['password'] = Hash::needsRehash($password) 
