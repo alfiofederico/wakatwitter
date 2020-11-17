@@ -45,7 +45,7 @@ class User extends Authenticatable
     }
     public function getBioAttribute($value)
     {
-        return ($value);
+        return ($value ?: 'About me');
     }
 
     public function setPasswordAttribute($password){
