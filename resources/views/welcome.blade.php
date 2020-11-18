@@ -100,7 +100,7 @@
             </div>
         </div>
         
-        <footer class="flex-center" style="margin-bottom: 1rem">Copyright©<script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script> Powered by<a href="https://alfiofedericodp.netlify.app/" target="_blank" style="text-decoration: none; color:rgb(220, 228, 202);"><span style="margin-left: 0.3rem">Federico</span></a></footer>
+        <footer class="flex-center" style="margin-bottom: 1rem">Copyright©<script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script> Powered by</footer>
         </div>
     </body>
 </html>
