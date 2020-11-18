@@ -1,6 +1,6 @@
 A Twitter-clone for my local community.
 
-Improvements/Bug Fixes neede:
+Improvements/Bug Fixes needed:
 
 - Responsiveness
 - Like/Dislike System is not fully working 
