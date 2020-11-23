@@ -4,16 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Tweet;
+use App\User;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Bcrypt;
+use Illuminate\Support\Facades\Hash;
+
 
 class TweetsController extends Controller
 {
         public function index()
     {
-        $tweets = \App\Tweet::latest()->get();
         return view('tweets.index', [
-
-            'tweets' => auth()->user()->timeline(),
-            
+            'tweets' => auth()
+                ->user()
+                ->timeline(),
         ]);
     }
     public function store()
@@ -25,6 +30,13 @@ class TweetsController extends Controller
             'body'=> $attributes['body'],
         ]);
 
+        return redirect('/tweets');
+    }
+
+    public function destroy(Tweet $tweet)
+    {   
+        $this->authorize('delete',$tweet);
+        $tweet->delete();
         return redirect('/tweets');
     }
 }

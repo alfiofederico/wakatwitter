@@ -10,7 +10,13 @@
         </a>
       </h5>
         <p class="text-sm mb-3">{{$tweet->body}}</p>
-
+      @can('delete',$tweet)
+          <form action="{{route('tweets.destroy', $tweet)}}" method="POST">
+          @csrf 
+          @method('DELETE')
+          <button type="submit" class="bg-blue-500 rounded-full shadow-md py-1 px-3 text-white text-xs mb-3" style="outline: none">Delete</button>
+          </form>
+       @endcan
 
         <div class="flex">
         <form  method="POST" action="/tweets/{{$tweet->id}}/like">
